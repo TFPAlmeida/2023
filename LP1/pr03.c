@@ -93,3 +93,27 @@ int highest_index_number(int v[], int n, int size){
         }
    } 
 }
+
+/**
+* finds the number with the highest frequency (mode) in a given array
+* @param v - array to be searched
+* @param size - array size
+* @return mode of array
+* e.g. input: ([1, 4, 2, 4], 4); output: 4
+* e.g. input: ([1, 1, 1, 4], 4); output: 1
+*/
+int number_highest_frequency(int v[], int size){
+    int count = 0, maxNumber = 0;
+    for(int i = 0; i < size; i++){
+        count = 1;
+        for(int x = i+1; x < size; x++){
+            if(v[i] == v[j]){
+                count ++;
+            }   
+        }
+         if(count > maxNumber){
+                maxNumber = v[i];
+         }
+    }
+    return maxNumber;
+}

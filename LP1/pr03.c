@@ -77,3 +77,19 @@ int lowest_index_number(const int v[], int n, int size){
     }
     return 0;
 }
+
+/**
+* searches for the highest index of a given integer
+* @param v - array to be searched
+* @param n - number to search
+* @param size - array size
+* @return - highest index which contains the integer n
+* e.g. input: ([1, 4, 2, 4], 4, 4); output: 3
+*/
+int highest_index_number(int v[], int n, int size){
+   for(int i = 0; i < size; i++){
+        if(v[i] == n){
+            return i;
+        }
+   } 
+}
